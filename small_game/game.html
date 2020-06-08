@@ -1,0 +1,60 @@
+
+<!doctype html>
+<!--Leah Teffera-->
+     
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="style.css">
+   <title>Game of Concentration</title>
+   
+</head>
+
+<body>
+   <h1>The Game of Concentration</h1>
+
+   <div id="board">
+        <img src="images/blank.jpg" id="cell1" alt="image1">
+        <img src="images/blank.jpg" id="cell2" alt="image2">
+        <img src="images/blank.jpg" id="cell3" alt="image3">
+        <img src="images/blank.jpg" id="cell4" alt="image4">
+        <img src="images/blank.jpg" id="cell5" alt="image5">
+        <img src="images/blank.jpg" id="cell6" alt="image6">
+        <img src="images/blank.jpg" id="cell7" alt="image7">
+        <img src="images/blank.jpg" id="cell8" alt="image8">
+        <img src="images/blank.jpg" id="cell9" alt="image9">
+        <img src="images/blank.jpg" id="cell10" alt="image10">
+        <img src="images/blank.jpg" id="cell11" alt="image11">
+        <img src="images/blank.jpg" id="cell12" alt="image12">
+        <img src="images/blank.jpg" id="cell13" alt="image13">
+        <img src="images/blank.jpg" id="cell14" alt="image14">
+        <img src="images/blank.jpg" id="cell15" alt="image15">
+        <img src="images/blank.jpg" id="cell16" alt="image16">
+   </div>
+
+   <div id="controls">
+     <button id="startNewGameButton">Start New Game</button>
+
+     <!-- display the number of tries and matches as the game progresses -->
+     <h2>Status</h2>
+     <p>Tries: <span id="tries"></span> Matches: <span id="matches"></span></p>
+     <p id="msg"></p>
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
+   <script src="https://cs.wellesley.edu/~cs204/assignments/a06/supplied.js"></script>
+   <script src="solution.js"></script>
+   <script>
+     // The following code removes all the nice IMG elements and replaces them with the same ones.
+     // The replacement lacks the spaces and carriage return elements, which means that each IMG
+     // can be made exactly 25% of the container.
+     function nospace(selector) {
+	 var html="";
+	 $(selector).children().each(function (i,elt) { html += elt.outerHTML; });
+	 $(selector).html(html);
+     }
+     nospace('#board');
+   </script>
+</body>
+</html>
